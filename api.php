@@ -184,7 +184,6 @@ if($error == 0)
     {
         if ($URI[1] == "supprimer") 
         {
-            
             if(($error2 = (ctype_digit($URI[2]) && ctype_digit($URI[3])) ? 0 : 1) == 0)
             {
                 $uid = $URI[2];
@@ -197,6 +196,16 @@ if($error == 0)
         }
     }
 
+    if ($context == "pdf" && count($URI)) 
+    {
+        if ($URI[1] == "imprimer") 
+        {
+            if(($error2 = (ctype_digit($URI[2])) ? 0 : 1) == 0)
+            {
+
+            }
+        }
+    }
 
 
 
